@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_indicator/carousel_indicator.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<Home> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<Home> {
   int pageIndex = 0;
 
   final List<Widget> imageList = [
@@ -28,45 +22,42 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        height: double.infinity,
-        color: Colors.blue,
-        width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.all(20),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(top: 20),
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Image.network(
-                          'https://www.ilt20.ae/assets/images/mobile-logo.png',
-                          height: 70, // Set the desired height
-                        ),
-                      ),
-                    ),
-                    Align(
+    return Container(
+      color: Colors.blue,
+      width: double.infinity,
+      child: Padding(
+        padding: EdgeInsets.all(20),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: Align(
                       alignment: Alignment.topLeft,
                       child: Image.network(
-                        'https://ilt20storage.blob.core.windows.net/ilt20storage/champions_mob.webp',
-                        height: 200, // Set the desired height
+                        'https://www.ilt20.ae/assets/images/mobile-logo.png',
+                        height: 70, // Set the desired height
                       ),
                     ),
-                    carouselSlider(),
-                    table('TEAM', 'PLAYED', 'POINTS', 'NRR'),
-                    table('GG', '1', '1', '1'),
-                    table('DV', '2', '2', '2'),
-                    table('MIE', '3', '3', '3'),
-                    table('DC', '4', '4', '4'),
-                  ],
-                ),
-              ],
-            ),
+                  ),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Image.network(
+                      'https://ilt20storage.blob.core.windows.net/ilt20storage/champions_mob.webp',
+                      height: 200, // Set the desired height
+                    ),
+                  ),
+                  carouselSlider(),
+                  table('TEAM', 'PLAYED', 'POINTS', 'NRR'),
+                  table('GG', '1', '1', '1'),
+                  table('DV', '2', '2', '2'),
+                  table('MIE', '3', '3', '3'),
+                  table('DC', '4', '4', '4'),
+                ],
+              ),
+            ],
           ),
         ),
       ),

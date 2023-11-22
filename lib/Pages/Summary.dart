@@ -4,68 +4,66 @@ class Summary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: SingleChildScrollView(
-        child: Card(
-          margin: EdgeInsets.all(20),
-          elevation: 10,
-          child: Container(
-            padding: EdgeInsets.all(20),
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: 30,
-                  color: Color(0xFFebeefa),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Centered Text',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                        ),
+      child: Card(
+        margin: EdgeInsets.all(20),
+        elevation: 10,
+        child: Container(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Container(
+                height: 30,
+                color: Color(0xFFebeefa),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Text(
+                      'Centered Text',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(children: [
-                      CustomCard(
-                        imageNetworkURL:
-                            'https://sportavideos.blob.core.windows.net/videos/IMAGES/TEAMS/TEA0000660.png',
-                      ),
-                      Text('DV'),
-                    ]),
-                    Text('Vs'),
-                    Column(children: [
-                      CustomCard(
-                        imageNetworkURL:
-                            'https://sportavideos.blob.core.windows.net/videos/IMAGES/TEAMS/TEA0000663.png',
-                      ),
-                      Text('GG'),
-                    ]),
-                  ],
-                ),
-                SizedBox(height: 20),
-                Column(children: [
-                  MyProgressBar(a: 146, b: 56, progressName: 'Runs Scored'),
-                  MyProgressBar(a: 546, b: 5365, progressName: 'Wicket Lost'),
-                  MyProgressBar(a: 456, b: 564, progressName: 'Boundary 4'),
-                  MyProgressBar(a: 455, b: 456, progressName: 'Boundary 6'),
-                  MyProgressBar(a: 213, b: 675, progressName: 'Dot Balls'),
-                  MyProgressBar(a: 23, b: 567, progressName: "100's"),
-                  MyProgressBar(a: 3245, b: 675, progressName: "50's"),
-                  MyProgressBar(a: 0, b: 0, progressName: '50+ Partnership'),
-                  MyProgressBar(
-                      a: 2345, b: 34, progressName: '100+ Partnership'),
-                ])
-              ],
-            ),
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(children: [
+                    CustomCard(
+                      imageNetworkURL:
+                          'https://sportavideos.blob.core.windows.net/videos/IMAGES/TEAMS/TEA0000660.png',
+                    ),
+                    Text('DV'),
+                  ]),
+                  Text('Vs'),
+                  Column(children: [
+                    CustomCard(
+                      imageNetworkURL:
+                          'https://sportavideos.blob.core.windows.net/videos/IMAGES/TEAMS/TEA0000663.png',
+                    ),
+                    Text('GG'),
+                  ]),
+                ],
+              ),
+              SizedBox(height: 20),
+              Column(children: [
+                MyProgressBar(a: 146, b: 56, progressName: 'Runs Scored'),
+                MyProgressBar(a: 546, b: 5365, progressName: 'Wicket Lost'),
+                MyProgressBar(a: 456, b: 564, progressName: 'Boundary 4'),
+                MyProgressBar(a: 455, b: 456, progressName: 'Boundary 6'),
+                MyProgressBar(a: 213, b: 675, progressName: 'Dot Balls'),
+                MyProgressBar(a: 23, b: 567, progressName: "100's"),
+                MyProgressBar(a: 3245, b: 675, progressName: "50's"),
+                MyProgressBar(a: 0, b: 0, progressName: '50+ Partnership'),
+                MyProgressBar(a: 2345, b: 34, progressName: '100+ Partnership'),
+              ])
+            ],
           ),
         ),
       ),

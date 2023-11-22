@@ -3,16 +3,15 @@ import 'package:flutter/material.dart';
 class PlayersList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Card(
-        margin: EdgeInsets.all(15),
-        elevation: 10,
-        child: Column(
-          children: [
-            teamName(),
-            playersList(),
-          ],
-        ),
+    return Card(
+      margin: EdgeInsets.all(15),
+      elevation: 10,
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          teamName(),
+          playersList(),
+        ],
       ),
     );
   }
